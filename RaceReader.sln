@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceReader", "RaceReader\RaceReader.csproj", "{212732C7-65A6-42C4-84F6-70E0DF4BCD21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{212732C7-65A6-42C4-84F6-70E0DF4BCD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212732C7-65A6-42C4-84F6-70E0DF4BCD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212732C7-65A6-42C4-84F6-70E0DF4BCD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212732C7-65A6-42C4-84F6-70E0DF4BCD21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05679D08-8E3E-4434-AEE2-D0317FAE8676}
+	EndGlobalSection
+EndGlobal
