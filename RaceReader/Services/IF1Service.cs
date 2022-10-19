@@ -10,6 +10,6 @@ namespace RaceReader.Services
     {
         public Task<List<string>> GetAllRaces();
         public Task<List<string>> GetAllCircuits();
-        public Task<List<string>> GetCircuitsForSeason();
+        public Task<string> GetCircuitForRound(string roundNumber);
     }
 }

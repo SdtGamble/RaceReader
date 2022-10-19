@@ -14,5 +14,4 @@ IHost host = Host.CreateDefaultBuilder(args)
 
 var raceReaderProgram = host.Services.GetRequiredService<F1ReaderProgram>();
 raceReaderProgram.Execute();
-Console.WriteLine("Press any key to finish");
 Console.ReadKey();

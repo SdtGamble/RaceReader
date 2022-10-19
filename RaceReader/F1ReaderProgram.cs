@@ -24,10 +24,19 @@ namespace F1Reader
         {
             // Get All races
             var races = await _f1Service.GetAllRaces();
+            PrintRaceInformation(races, "Races");
             // Get All circuit names
             var circuits = await _f1Service.GetAllCircuits();
+            PrintRaceInformation(circuits, "Circuits");
             // Get all circuits for a given season
-             var circuits2021 = await _f1Service.GetCircuitsForSeason();
+            var circuit = await _f1Service.GetCircuitForRound("1");
+            Console.WriteLine("Circuit for round 1 \n" + circuit);
+        }
+
+        private void PrintRaceInformation(List<string> list, string informationTitle)
+        {
+            Console.WriteLine(informationTitle);
+            list.ForEach(i => Console.Write("{0}\n", i));
         }
     }
 }

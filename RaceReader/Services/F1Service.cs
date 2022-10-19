@@ -1,9 +1,4 @@
 ﻿using RaceReader.Clients;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RaceReader.Services
 {
@@ -21,20 +16,24 @@ namespace RaceReader.Services
             var f1Data = await f1Client.GetF1Data();
             var raceNames = new List<string>();
             raceNames = f1Data.MRData.RaceTable.Races.Select(r => r.RaceName).ToList();
-            var test = "";
             return raceNames;
         }
 
         public async Task<List<string>> GetAllCircuits()
         {
-            return null;
+            var f1Data = await f1Client.GetF1Data();
+            var circuitNames = new List<string>();
+            circuitNames = f1Data.MRData.RaceTable.Races.Select(r => r.Circuit.CircuitName).ToList();
+            return circuitNames;
         }
 
-
-
-        public async Task<List<string>> GetCircuitsForSeason()
+        public async Task<string> GetCircuitForRound(string roundNumber)
         {
-            return null;
+            var f1Data = await f1Client.GetF1Data();
+            var circuitName = f1Data.MRData.RaceTable.Races.Where(n => n.Round == roundNumber)
+                .Select(r => r.Circuit.CircuitName).FirstOrDefault()
+                ?? "Not Found";
+            return circuitName;
         }
     }
 
